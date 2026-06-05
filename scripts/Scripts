@@ -1,0 +1,45 @@
+# Repository Scripts Directory
+
+This section provides a detailed mapping of the SQL script files available within each repository, linking them directly to our data analytics roadmap.
+
+---
+
+## 📁 Repository 1: Exploratory SQL Analysis
+*Source files extracted from image_6e44bd.png*
+
+This repository contains the foundational scripts used to discover, clean, and profile the dataset before running complex business logic.
+
+*   **`Data_Base_Exploration.sql`**
+    *   *Purpose:* Handles schema discovery, table relationships audit, and total row count evaluations across the database.
+*   **`Dimension Exploration.sql`**
+    *   *Purpose:* Profiles categorical columns to check for distinct values, cardinality, and missing text entries.
+*   **`Date Exploration.sql`**
+    *   *Purpose:* Sets the time-horizon boundaries by extracting the minimum/maximum dates and identifying timeline gaps.
+*   **`Measure Exploration.sql`**
+    *   *Purpose:* Executes high-level aggregations (`SUM`, `AVG`, `COUNT`) to establish the initial baseline business metrics.
+*   **`Magnitude Analysis.sql`**
+    *   *Purpose:* Measures the spread, scale, and variances of numerical inputs to flag outliers or anomalies.
+*   **`Ranking Analysis.sql`**
+    *   *Purpose:* Leverages window ranking functions to isolate top-performing and underperforming records (Top N / Bottom N analysis).
+
+---
+
+## 📁 Repository 2: Advanced SQL Analytics
+*Source files extracted from image_6e44b8.png*
+
+This repository features advanced query patterns, mathematical formulations, and final views structured for stakeholder reporting and BI integration.
+
+*   **`Change over time.sql`**
+    *   *Purpose:* Employs time-series analytical functions (`LAG`/`LEAD`) to calculate period-over-period growth rates.
+*   **`Cumulative Analysis.sql`**
+    *   *Purpose:* Calculates running totals and rolling averages to observe long-term data accumulation patterns.
+*   **`Performance Analysis.sql`**
+    *   *Purpose:* Runs variance assessments against benchmarks, targets, or past performance milestones.
+*   **`Part to whole analysis.sql`**
+    *   *Purpose:* Determines proportional contributions using partition-based division to get exact percentage-of-total values.
+*   **`Data Segmentation.sql`**
+    *   *Purpose:* Implements conditional classification logic (`CASE WHEN`) to build customer cohorts or behavioral groupings.
+*   **`Customer_report.sql`**
+    *   *Purpose:* A compiled operational script designed to deliver comprehensive insights specifically focused on customer metrics and behavior.
+*   **`Product_report.sql`**
+    *   *Purpose:* A consolidated reporting query structured to track product line performance, category share, and moving item trends.
