@@ -1,0 +1,73 @@
+# Data Analytics Project Roadmap
+
+This document outlines the structured roadmap and methodology used across our two specialized SQL repositories: **Exploratory SQL Analysis** and **Advanced SQL Analytics**. By following this step-by-step framework, we ensure a comprehensive transition from raw data discovery to advanced strategic insights.
+
+---
+
+## 🗺️ Overall Framework Overview
+
+The data analysis lifecycle is divided into two major phases:
+1. **Exploratory Data Analysis (EDA):** Building the foundation, understanding the data structure, and identifying baseline metrics.
+2. **Advanced Analytics:** Implementing deep statistical techniques, trend analysis, and business intelligence reporting.
+
+---
+
+## 🔹 Phase 1: Exploratory SQL Analysis (EDA)
+*Target Repository: Exploratory SQL Analysis*
+
+The goal of this phase is to perform initial data discovery, audit data quality, and understand the core variables within the database.
+
+### 1. Database Exploration
+*   **Objective:** Understand the ecosystem of the dataset.
+*   **SQL Focus:** Investigating schema structures, table relationships, primary/foreign keys, data types, and total row counts.
+
+### 2. Dimensions Exploration
+*   **Objective:** Analyze categorical variables (dimensions).
+*   **SQL Focus:** Grouping data to find unique values, identifying missing or null values in text columns, and understanding the distribution of categories.
+
+### 3. Date Exploration
+*   **Objective:** Establish the temporal boundaries of the dataset.
+*   **SQL Focus:** Extracting minimum and maximum dates, identifying time gaps, and understanding data granularity (daily, monthly, yearly).
+
+### 4. Measures Exploration (Big Numbers)
+*   **Objective:** Calculate high-level aggregate metrics.
+*   **SQL Focus:** Running baseline aggregations (`SUM`, `AVG`, `COUNT`) to find the "Big Numbers" or high-level KPIs of the business.
+
+### 5. Magnitude
+*   **Objective:** Assess the scale and distribution of numerical fields.
+*   **SQL Focus:** Analyzing the spread of data, evaluating standard deviations, and identifying potential outliers or anomalies.
+
+### 6. Ranking (Top N - Bottom N)
+*   **Objective:** Isolate extreme performers within the dataset.
+*   **SQL Focus:** Using Window Functions (`ROW_NUMBER`, `RANK`, `DENSE_RANK`) paired with `ORDER BY` and `LIMIT` to find the highest and lowest performing segments.
+
+---
+
+## 🔸 Phase 2: Advanced SQL Analytics
+*Target Repository: Advanced SQL Analytics*
+
+Once the data is thoroughly understood, we apply advanced analytical patterns to uncover deep insights, behavioral trends, and performance metrics.
+
+### 7. Change-Over-Time (Trends)
+*   **Objective:** Evaluate performance trajectories over specific timelines.
+*   **SQL Focus:** Utilizing window functions like `LAG()` and `LEAD()` to calculate Month-over-Month (MoM) or Year-over-Year (YoY) growth and growth rates.
+
+### 8. Cumulative Analysis
+*   **Objective:** Observe the continuous growth and accumulation of metrics.
+*   **SQL Focus:** Implementing running totals and moving averages using `SUM() OVER (ORDER BY ...)` to smooth out short-term fluctuations.
+
+### 9. Performance Analysis
+*   **Objective:** Measure current data against benchmarks or historical targets.
+*   **SQL Focus:** Comparative analysis, variance calculations, and evaluating performance ratios across different periods or business sectors.
+
+### 10. Part-to-Whole (Proportional)
+*   **Objective:** Determine how much individual components contribute to the entire business.
+*   **SQL Focus:** Calculating percentages of totals using analytical divisions, such as `Value / SUM(Value) OVER()`.
+
+### 11. Data Segmentation
+*   **Objective:** Group the data into meaningful cohorts or clusters.
+*   **SQL Focus:** Using complex `CASE WHEN` logic, RFM (Recency, Frequency, Monetary) segmentation, or behavioral bucketing to categorize users/products.
+
+### 12. Reporting
+*   **Objective:** Finalize queries to drive data storytelling and decision-making.
+*   **SQL Focus:** Structuring clean, optimized, and heavily indexed views or final tables ready to be consumed by stakeholders or plugged into BI tools (e.g., Power BI, Tableau).
